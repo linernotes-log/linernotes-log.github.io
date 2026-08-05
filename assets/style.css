@@ -1,0 +1,67 @@
+/* Liner Notes — サイト共通スタイル（シンプル・読み物優先・モバイルファースト） */
+:root {
+  --text: #2b2b2b;
+  --bg: #ffffff;
+  --sub: #6b6b6b;
+  --line: #e4e4e4;
+  --accent: #1a5c8a;
+  --accent-bg: #f2f7fa;
+  --warn-bg: #faf6ef;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.9;
+  font-size: 16px;
+}
+.container { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+header.site { border-bottom: 1px solid var(--line); padding: 20px 0; }
+header.site .container { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.site-title { font-size: 1.3rem; font-weight: 700; letter-spacing: 0.02em; margin: 0; }
+.site-title a { color: var(--text); text-decoration: none; }
+.site-desc { color: var(--sub); font-size: 0.85rem; margin: 0; }
+main { padding: 32px 0 56px; }
+h1 { font-size: 1.45rem; line-height: 1.5; margin: 0 0 8px; }
+h2 { font-size: 1.15rem; margin: 2.2em 0 0.6em; padding-bottom: 6px; border-bottom: 2px solid var(--line); }
+h3 { font-size: 1.02rem; margin: 1.8em 0 0.4em; }
+p { margin: 0.8em 0; }
+a { color: var(--accent); }
+.meta { color: var(--sub); font-size: 0.85rem; margin-bottom: 4px; }
+.pr-note {
+  background: var(--warn-bg);
+  border-radius: 6px;
+  font-size: 0.82rem;
+  color: var(--sub);
+  padding: 10px 14px;
+  margin: 16px 0 24px;
+}
+table { border-collapse: collapse; width: 100%; font-size: 0.88rem; margin: 1em 0; }
+th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+th { background: var(--accent-bg); font-weight: 600; white-space: nowrap; }
+.table-wrap { overflow-x: auto; }
+.item-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px 18px;
+  margin: 1.2em 0;
+}
+.item-card h3 { margin-top: 0; }
+.item-card .buy { font-size: 0.9rem; }
+.pros { color: #1c6b34; }
+.cons { color: #9a4a1f; }
+ul { padding-left: 1.4em; }
+li { margin: 0.3em 0; }
+.article-list { list-style: none; padding: 0; }
+.article-list li { border-bottom: 1px solid var(--line); padding: 16px 0; margin: 0; }
+.article-list .date { color: var(--sub); font-size: 0.82rem; display: block; }
+.article-list a { font-size: 1.05rem; font-weight: 600; text-decoration: none; }
+.article-list p { margin: 4px 0 0; font-size: 0.88rem; color: var(--sub); }
+footer.site {
+  border-top: 1px solid var(--line);
+  padding: 24px 0 40px;
+  color: var(--sub);
+  font-size: 0.8rem;
+}
