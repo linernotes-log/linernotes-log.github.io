@@ -1,11 +1,15 @@
-/* Liner Notes — cafict.com を参照した抑制的なデザイン（2026-08-06改訂）
-   要素：余白を主役に／モノトーン基調／細い罫線／英字はレタースペーシングで控えめなアクセント */
+/* Liner Notes — cafict.com を実機確認して再設計（2026-08-06 第3版）
+   要点：本文は左寄せ（中央寄せは狭いカードのキャプションのみ）／罫線・表組みの箱を廃止し
+   写真＋文章で語る／写真を大きく主役に／見出しに繊細な明朝を使う */
+
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600&display=swap');
+
 :root {
-  --text: #1f1f1f;
+  --text: #262626;
+  --sub: #8c8c8c;
   --bg: #ffffff;
-  --sub: #909090;
-  --line: #e9e7e4;
-  --accent: #1f1f1f;
+  --line: #ececec;
+  --accent: #8a5a3b; /* 固有名詞用の控えめな差し色 */
 }
 * { box-sizing: border-box; }
 html { -webkit-font-smoothing: antialiased; }
@@ -14,145 +18,161 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic Medium", "Yu Gothic", sans-serif;
   color: var(--text);
   background: var(--bg);
-  line-height: 2.1;
+  line-height: 1.95;
   font-size: 15.5px;
-  font-weight: 400;
 }
-.container { max-width: 680px; margin: 0 auto; padding: 0 24px; }
+.container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+.serif { font-family: "Shippori Mincho", serif; }
 
-/* ヘッダー：中央寄せ・英字ロゴ・広めのレタースペース */
-header.site { padding: 56px 0 40px; text-align: center; }
+/* ヘッダー：左寄せ・小さく静かに（cafict準拠） */
+header.site { padding: 28px 0; border-bottom: 1px solid var(--line); }
+header.site .container { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; }
 .site-title {
-  font-size: 1.5rem;
-  font-weight: 500;
-  letter-spacing: 0.42em;
-  text-indent: 0.42em; /* letter-spacingの右余りを相殺して視覚的中央に */
+  font-family: "Shippori Mincho", serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
   margin: 0;
-  text-transform: uppercase;
 }
 .site-title a { color: var(--text); text-decoration: none; }
-.site-desc {
+.site-desc { color: var(--sub); font-size: 0.78rem; letter-spacing: 0.08em; margin: 0; }
+
+main { padding: 0 0 100px; }
+
+/* トップのリード文：中央寄せをやめて左寄せに（幅広の中央寄せ文が「素人ブログ」に見える原因だった） */
+.lead {
   color: var(--sub);
-  font-size: 0.78rem;
-  letter-spacing: 0.18em;
-  margin: 14px 0 0;
+  font-size: 0.92rem;
+  line-height: 2.1;
+  margin: 40px 0 56px;
+  max-width: 46em;
 }
-header.site .rule { width: 32px; height: 1px; background: var(--text); margin: 28px auto 0; }
 
-main { padding: 8px 0 88px; }
-
-/* 見出し */
-h1 {
-  font-size: 1.5rem;
-  line-height: 1.8;
+.section-label {
+  font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 0.04em;
-  margin: 8px 0 12px;
+  letter-spacing: 0.22em;
+  text-indent: 0.22em;
+  color: var(--sub);
+  margin: 0 0 24px;
+  text-transform: uppercase;
 }
-h2 {
+
+/* 記事一覧：cafictのカードグリッドに寄せる。写真を大きく・カード内だけ中央寄せ */
+.article-list {
+  list-style: none; padding: 0; margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 36px 28px;
+}
+.article-list li { margin: 0; }
+.article-list a.thumb-link { display: block; text-decoration: none; color: inherit; }
+.article-list .thumb {
+  width: 100%; aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background: #f4f2f0;
+  display: block;
+}
+.article-list .body { text-align: center; padding-top: 14px; }
+.article-list .date { color: var(--sub); font-size: 0.7rem; letter-spacing: 0.1em; display: block; margin-bottom: 8px; }
+.article-list a.title { font-size: 0.98rem; font-weight: 600; line-height: 1.7; text-decoration: none; color: var(--text); display: block; }
+.article-list a.title:hover { color: var(--accent); }
+.article-list p.excerpt { margin: 8px 0 0; font-size: 0.8rem; color: var(--sub); line-height: 1.8; }
+
+/* 記事ページ：本文は左寄せ */
+.meta-row { color: var(--sub); font-size: 0.78rem; letter-spacing: 0.04em; margin-bottom: 18px; }
+.meta-row .tag {
+  display: inline-block; margin-left: 10px; padding: 2px 9px;
+  border: 1px solid var(--line); border-radius: 3px; font-size: 0.7rem; letter-spacing: 0.06em;
+}
+h1.article-title {
+  font-family: "Shippori Mincho", serif;
+  font-size: 1.7rem;
+  line-height: 1.7;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin: 0 0 32px;
+  text-align: left;
+}
+.hero-photo {
+  width: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  display: block;
+  margin: 0 0 40px;
+  background: #f4f2f0;
+}
+main p { margin: 1.3em 0; text-align: left; }
+main .container > p:first-of-type { margin-top: 0; }
+
+/* 固有名詞の控えめな強調 */
+.name { color: var(--accent); font-weight: 600; }
+
+/* 章見出し：cafictの「上下に罫線を通す帯」を再現 */
+h2.section-title {
+  font-family: "Shippori Mincho", serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-align: left;
+  margin: 4.2em 0 1.6em;
+  padding: 14px 0;
+  border-top: 1px solid var(--text);
+  border-bottom: 1px solid var(--text);
+}
+h3.item-title {
+  font-family: "Shippori Mincho", serif;
   font-size: 1.05rem;
   font-weight: 600;
-  letter-spacing: 0.14em;
-  margin: 3.6em 0 1.2em;
-  padding-bottom: 14px;
-  border-bottom: 1px solid var(--line);
+  margin: 2.6em 0 1em;
 }
-h3 { font-size: 0.98rem; font-weight: 600; letter-spacing: 0.06em; margin: 2em 0 0.6em; }
-p { margin: 1.1em 0; }
-a { color: var(--text); text-decoration: underline; text-decoration-color: #c9c5c0; text-underline-offset: 4px; }
+
+/* 商品写真：大きく、枠なし */
+.product-photo {
+  width: 100%;
+  max-width: 420px;
+  display: block;
+  margin: 0 auto 1.6em;
+  background: #f4f2f0;
+}
+
+/* 一覧表：罫線箱をやめ、行の下線だけの静かな一覧に */
+.spec-list { margin: 2em 0; padding: 0; list-style: none; font-size: 0.88rem; }
+.spec-list li {
+  display: flex; justify-content: space-between; gap: 16px;
+  padding: 11px 0; border-bottom: 1px solid var(--line);
+}
+.spec-list .label { color: var(--sub); }
+.spec-list .value { text-align: right; }
+.spec-list a { color: var(--text); text-decoration: underline; text-decoration-color: #d8d3cd; text-underline-offset: 3px; }
+
+a { color: var(--text); text-decoration: underline; text-decoration-color: #d8d3cd; text-underline-offset: 3px; }
 a:hover { text-decoration-color: var(--text); }
+a.buy-link { color: var(--accent); font-weight: 600; text-decoration: none; }
+a.buy-link:hover { text-decoration: underline; }
 
-.meta { color: var(--sub); font-size: 0.78rem; letter-spacing: 0.16em; margin-bottom: 8px; }
+ul.plain, ol.plain { padding-left: 1.4em; margin: 1.2em 0; }
+ul.plain li, ol.plain li { margin: 0.5em 0; }
 
-/* PR表記：色箱をやめて静かな注記に */
+/* PR表記：控えめに・記事の合間（比較が始まる直前）に配置 */
 .pr-note {
   color: var(--sub);
-  font-size: 0.76rem;
+  font-size: 0.74rem;
   line-height: 1.9;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  padding: 14px 2px;
-  margin: 28px 0 40px;
-}
-
-/* 表：縦罫線なし・細い横罫線のみ */
-.table-wrap { overflow-x: auto; margin: 1.6em 0; }
-table { border-collapse: collapse; width: 100%; font-size: 0.84rem; line-height: 1.7; }
-th, td { border: none; border-bottom: 1px solid var(--line); padding: 12px 14px 12px 2px; text-align: left; vertical-align: top; }
-th { color: var(--sub); font-weight: 500; font-size: 0.76rem; letter-spacing: 0.12em; white-space: nowrap; }
-
-/* 商品カード：写真＋余白 */
-.item-card {
-  border: none;
-  border-bottom: 1px solid var(--line);
-  padding: 28px 0;
-  margin: 0;
-  display: flex;
-  gap: 24px;
-  align-items: flex-start;
-}
-.item-card:first-of-type { border-top: 1px solid var(--line); }
-.item-card img {
-  width: 128px; height: 128px;
-  object-fit: contain;
-  flex-shrink: 0;
-  background: #fafafa;
-}
-.item-card .body { flex: 1; min-width: 0; }
-.item-card h3 { margin: 0 0 6px; }
-.item-card p { margin: 0.5em 0; font-size: 0.9rem; }
-.pros { color: #4a4a4a; }
-.cons { color: #8a7a6a; }
-.pros::before { content: "○ "; color: var(--sub); }
-.cons::before { content: "△ "; color: var(--sub); }
-@media (max-width: 480px) {
-  .item-card { flex-direction: column; gap: 14px; }
-  .item-card img { width: 100%; height: 180px; }
-}
-
-ul, ol { padding-left: 1.5em; }
-li { margin: 0.45em 0; }
-
-/* 記事一覧：写真つきカード */
-.article-list { list-style: none; padding: 0; margin: 0; }
-.article-list li { border-bottom: 1px solid var(--line); padding: 32px 0; margin: 0; display: flex; gap: 24px; align-items: flex-start; }
-.article-list .thumb {
-  width: 148px; height: 110px;
-  object-fit: cover;
-  flex-shrink: 0;
-  background: #fafafa;
-}
-.article-list .body { flex: 1; min-width: 0; }
-.article-list .date { color: var(--sub); font-size: 0.74rem; letter-spacing: 0.16em; display: block; margin-bottom: 8px; }
-.article-list a.title { font-size: 1rem; font-weight: 600; line-height: 1.9; text-decoration: none; }
-.article-list a.title:hover { text-decoration: underline; text-decoration-color: #c9c5c0; }
-.article-list p { margin: 8px 0 0; font-size: 0.82rem; color: var(--sub); line-height: 1.9; }
-@media (max-width: 480px) {
-  .article-list li { flex-direction: column; gap: 14px; }
-  .article-list .thumb { width: 100%; height: 160px; }
-}
-
-/* リード文（トップ） */
-.lead { color: var(--sub); font-size: 0.86rem; text-align: center; line-height: 2.2; margin: 0 0 48px; }
-
-/* セクション見出し（トップの「記事一覧」）：英字スタイル */
-.section-label {
-  text-align: center;
-  font-size: 0.8rem;
-  font-weight: 500;
-  letter-spacing: 0.34em;
-  text-indent: 0.34em;
-  color: var(--text);
-  margin: 0 0 8px;
-  text-transform: uppercase;
+  margin: 2.4em 0;
 }
 
 footer.site {
   border-top: 1px solid var(--line);
-  padding: 36px 0 64px;
+  margin-top: 80px;
+  padding: 32px 0 56px;
   color: var(--sub);
-  font-size: 0.72rem;
-  line-height: 2;
-  text-align: center;
+  font-size: 0.74rem;
+  line-height: 1.9;
 }
-footer.site .fname { letter-spacing: 0.3em; text-indent: 0.3em; text-transform: uppercase; margin-bottom: 10px; color: var(--text); }
+footer.site .fname { font-family: "Shippori Mincho", serif; font-size: 0.95rem; color: var(--text); margin-bottom: 8px; }
+
+@media (max-width: 480px) {
+  h1.article-title { font-size: 1.4rem; }
+  .article-list { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 28px 16px; }
+}
