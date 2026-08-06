@@ -146,6 +146,8 @@ h3.item-title {
 .spec-list .value { text-align: right; flex-shrink: 0; }
 .spec-list .price { font-weight: 600; color: var(--text); }
 .spec-list .rating { display: block; font-size: 0.76rem; color: var(--sub); margin-top: 2px; white-space: nowrap; }
+.spec-list .per-use { font-weight: 600; color: var(--accent); }
+.spec-list .pack-price { display: block; font-size: 0.76rem; color: var(--sub); margin-top: 2px; white-space: nowrap; }
 .spec-list a { color: var(--text); text-decoration: underline; text-decoration-color: #d8d3cd; text-underline-offset: 3px; }
 
 a { color: var(--text); text-decoration: underline; text-decoration-color: #d8d3cd; text-underline-offset: 3px; }
