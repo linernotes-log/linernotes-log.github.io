@@ -139,11 +139,13 @@ h3.item-title {
 /* 一覧表：罫線箱をやめ、行の下線だけの静かな一覧に */
 .spec-list { margin: 2em 0; padding: 0; list-style: none; font-size: 0.88rem; }
 .spec-list li {
-  display: flex; justify-content: space-between; gap: 16px;
+  display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
   padding: 11px 0; border-bottom: 1px solid var(--line);
 }
 .spec-list .label { color: var(--sub); }
-.spec-list .value { text-align: right; }
+.spec-list .value { text-align: right; flex-shrink: 0; }
+.spec-list .price { font-weight: 600; color: var(--text); }
+.spec-list .rating { display: block; font-size: 0.76rem; color: var(--sub); margin-top: 2px; white-space: nowrap; }
 .spec-list a { color: var(--text); text-decoration: underline; text-decoration-color: #d8d3cd; text-underline-offset: 3px; }
 
 a { color: var(--text); text-decoration: underline; text-decoration-color: #d8d3cd; text-underline-offset: 3px; }
