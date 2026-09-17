@@ -41,8 +41,21 @@
 
 <p class="section-label">Posts</p>
 
+<div class="category-filter" role="group" aria-label="カテゴリで絞り込む">
+  <button type="button" class="filter-pill is-active" data-filter="all">すべて</button>
+  <button type="button" class="filter-pill" data-filter="coffee">コーヒー</button>
+  <button type="button" class="filter-pill" data-filter="music">音楽・オーディオ</button>
+  <button type="button" class="filter-pill" data-filter="household">暮らしの日用品</button>
+  <button type="button" class="filter-pill" data-filter="appliance">家電・ガジェット</button>
+  <button type="button" class="filter-pill" data-filter="beauty">美容・ヘアケア</button>
+  <button type="button" class="filter-pill" data-filter="cat">猫用品</button>
+  <button type="button" class="filter-pill" data-filter="food">食品・ドリンク</button>
+  <button type="button" class="filter-pill" data-filter="stationery">文房具・紙モノ</button>
+</div>
+<p class="filter-empty" hidden>このカテゴリの記事はまだありません。</p>
+
 <ul class="article-list">
-  <li>
+  <li data-category="food">
     <a class="thumb-link" href="articles/sleep-drink-comparison.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/morinagamilk/cabinet/pic_top/imgrc0111078196.jpg?_ex=400x400" alt="森永乳業 睡眠改善ドリンク" loading="lazy">
     </a>
@@ -52,7 +65,7 @@
       <p class="excerpt">飲むお酢・乳飲料・ノンアルコール飲料・粉末スティック・ハーブティーと、タイプの違う5点を1回あたりの実コストで比較しました。</p>
     </div>
   </li>
-  <li>
+  <li data-category="appliance">
     <a class="thumb-link" href="articles/wireless-mouse-silver.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/moderatoshop/cabinet/imge14/b07yyjv671.jpg?_ex=400x400" alt="バッファロー FLEXUS ワイヤレスマウス シルバー" loading="lazy">
     </a>
@@ -62,7 +75,7 @@
       <p class="excerpt">ロジクール・エレコム・バッファローから、シルバーのワイヤレスマウスを集めました。接続方式・質感・価格帯の違いで3ブランドを比較しています。</p>
     </div>
   </li>
-  <li>
+  <li data-category="appliance">
     <a class="thumb-link" href="articles/wireless-mouse-black.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/logicool/cabinet/prd/mice/seb-m705/seb-m705_01_c.jpg?_ex=400x400" alt="ロジクール SEB-M705a ワイヤレスマウス ブラック" loading="lazy">
     </a>
@@ -72,7 +85,7 @@
       <p class="excerpt">ロジクール・エレコム・バッファローから、黒いワイヤレスマウスを集めました。接続方式・サイズ・価格帯の違いで3ブランドを比較しています。</p>
     </div>
   </li>
-  <li>
+  <li data-category="beauty">
     <a class="thumb-link" href="articles/hair-dryer-black.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/masayosiryouhin/cabinet/12326613/dj-eh-na0j-w_1.jpg?_ex=400x400" alt="パナソニック ドライヤー ナノケア チャコールブラック" loading="lazy">
     </a>
@@ -82,7 +95,7 @@
       <p class="excerpt">コイズミ・サロニア・パナソニックから、黒いヘアドライヤーを集めました。風量・重さ・ケア機能・価格帯の違いで3ブランドを比較しています。</p>
     </div>
   </li>
-  <li>
+  <li data-category="cat">
     <a class="thumb-link" href="articles/cat-water-fountain-comparison.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/next-online/cabinet/06938766/09465194/samune0920-min.jpg?_ex=400x400" alt="猫用自動給水器" loading="lazy">
     </a>
@@ -92,7 +105,7 @@
       <p class="excerpt">next-online・プラスアクア2・ioroiなど7点を、静音性（dB表記）・容量・素材・保証の違いで比較しました。</p>
     </div>
   </li>
-  <li>
+  <li data-category="coffee">
     <a class="thumb-link" href="articles/coffee-maker-black.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/rcmd/cabinet/as03/as-46537.jpg?_ex=400x400" alt="siroca 全自動コーヒーメーカー ブラック" loading="lazy">
     </a>
@@ -102,7 +115,7 @@
       <p class="excerpt">siroca・タイガー・メリタから、黒いコーヒーメーカーを集めました。全自動かドリップ式か、ミルの有無、価格帯の違いで3ブランドを比較しています。</p>
     </div>
   </li>
-  <li>
+  <li data-category="appliance">
     <a class="thumb-link" href="articles/toaster-black.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/monoworld/cabinet/11980599/compass1762411296.jpg?_ex=400x400" alt="アラジン グラファイトトースター ブラック" loading="lazy">
     </a>
@@ -112,7 +125,7 @@
       <p class="excerpt">コイズミ・アラジン・象印から、黒いオーブントースターを集めました。発熱方式・庫内の広さ・価格帯の違いで3ブランドを比較しています。</p>
     </div>
   </li>
-  <li>
+  <li data-category="appliance">
     <a class="thumb-link" href="articles/electric-kettle-black.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/najimihouse/cabinet/00946501/imgrc0101753904.jpg?_ex=400x400" alt="ティファール 電気ケトル ジャスティンロック ブラック" loading="lazy">
     </a>
@@ -122,7 +135,7 @@
       <p class="excerpt">ティファール・象印・タイガーから、黒い電気ケトルを集めました。容量・温度調節・価格帯の違いで3ブランド4点を比較しています。</p>
     </div>
   </li>
-  <li>
+  <li data-category="appliance">
     <a class="thumb-link" href="articles/wireless-mouse-white.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/elecom/cabinet/s500_19/m-xgm15bbswfec_03r.jpg?_ex=400x400" alt="エレコム ワイヤレスマウス EX-G ホワイト" loading="lazy">
     </a>
@@ -132,7 +145,7 @@
       <p class="excerpt">ロジクール・エレコム・バッファローから、白いワイヤレスマウスを集めました。接続方式・形状・価格帯の違いで3ブランドを比較しています。</p>
     </div>
   </li>
-  <li>
+  <li data-category="beauty">
     <a class="thumb-link" href="articles/hair-dryer-white.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/panasonic-store/cabinet/banner/thumb/eh-ne7m-w_main_017.jpg?_ex=400x400" alt="パナソニック ヘアードライヤー イオニティ ウォームホワイト" loading="lazy">
     </a>
@@ -142,7 +155,7 @@
       <p class="excerpt">コイズミ・サロニア・パナソニックから、白いヘアドライヤーを集めました。風量・重さ・ケア機能の違いで3ブランドを比較しています。</p>
     </div>
   </li>
-  <li>
+  <li data-category="beauty">
     <a class="thumb-link" href="articles/hair-iron-white.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/masayosiryouhin/cabinet/10218160/eh-hsoj-w_00b.jpg?_ex=400x400" alt="パナソニック ストレートアイロン ナノケア ホワイト" loading="lazy">
     </a>
@@ -152,7 +165,7 @@
       <p class="excerpt">サロニア・パナソニック・クレイツから、白いストレートヘアアイロンを集めました。プレートの仕組み・コードの有無・価格帯の違いで3ブランドを比較しています。</p>
     </div>
   </li>
-  <li>
+  <li data-category="appliance">
     <a class="thumb-link" href="articles/food-processor-white.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/hotch-potch/cabinet/kago800_img1/00014805.jpg?_ex=400x400" alt="レコルト コードレスカプセルカッターボンヌ アイボリー" loading="lazy">
     </a>
@@ -162,7 +175,7 @@
       <p class="excerpt">パナソニック・クイジナート・レコルトから、白いフードプロセッサーを集めました。容量・刃の構造・価格帯の違いで3ブランドを比較しています。</p>
     </div>
   </li>
-  <li>
+  <li data-category="appliance">
     <a class="thumb-link" href="articles/handy-cleaner-white.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/twinbird/cabinet/06297082/51241/imgrc0105214316.jpg?_ex=400x400" alt="ツインバード コード式スティッククリーナー ホワイト" loading="lazy">
     </a>
@@ -172,7 +185,7 @@
       <p class="excerpt">アイリスオーヤマ・ツインバード・山善・マキタから、白いコードレススティッククリーナーを集めました。吸引方式・重さ・電源方式の違いで4ブランド4点を比較しています。</p>
     </div>
   </li>
-  <li>
+  <li data-category="appliance">
     <a class="thumb-link" href="articles/rice-cooker-white.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/tiger-online/cabinet/jbs-a055_ra260710.jpg?_ex=400x400" alt="タイガー 3合炊き炊飯器 ホワイト" loading="lazy">
     </a>
@@ -182,7 +195,7 @@
       <p class="excerpt">タイガー・象印・アイリスオーヤマ・ツインバードから、白い3合炊き炊飯器を集めました。加熱方式・機能・価格帯の違いで4ブランド4点を比較しています。</p>
     </div>
   </li>
-  <li>
+  <li data-category="coffee">
     <a class="thumb-link" href="articles/coffee-maker-white.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/roomy-garden/cabinet/500cart_all/500cart_11g/p10n-5/win2066-aq004-1_gt02.jpg?_ex=400x400" alt="レコルト レインドリップコーヒーメーカー ホワイト" loading="lazy">
     </a>
@@ -192,7 +205,7 @@
       <p class="excerpt">siroca・レコルト・メリタ・タイガーから、白いコーヒーメーカーを集めました。抽出方式・杯数・保温の仕組みの違いで4ブランド4点を比較しています。</p>
     </div>
   </li>
-  <li>
+  <li data-category="appliance">
     <a class="thumb-link" href="articles/toaster-white.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/e-goods/cabinet/e_cart3/aj_gs13a_th.jpg?_ex=400x400" alt="アラジン グラファイトトースター ホワイト" loading="lazy">
     </a>
@@ -202,7 +215,7 @@
       <p class="excerpt">アラジン・象印・山善・コイズミから、白いオーブントースターを集めました。発熱の仕組み・庫内の広さ・価格帯の違いで4ブランド4点を比較しています。</p>
     </div>
   </li>
-  <li>
+  <li data-category="household">
     <a class="thumb-link" href="articles/water-bottle-white.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/hotcrafts/cabinet/kinto/canister/20941-46-s.jpg?_ex=400x400" alt="KINTO トラベルタンブラー ホワイト系" loading="lazy">
     </a>
@@ -212,7 +225,7 @@
       <p class="excerpt">WENS PRODUCTS・UNIR・KINTO・タイガーから、白い水筒・タンブラーを集めました。容量・保温保冷の構造・洗いやすさの違いで4ブランド4点を比較しています。</p>
     </div>
   </li>
-  <li>
+  <li data-category="appliance">
     <a class="thumb-link" href="articles/electric-kettle-white.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/najimihouse/cabinet/00946501/imgrc0101753903.jpg?_ex=400x400" alt="ティファール ジャスティンロック ホワイト" loading="lazy">
     </a>
@@ -222,7 +235,7 @@
       <p class="excerpt">タイガー・ティファール・象印・レコルトから、白い電気ケトルだけを集めました。容量・沸かす速さ・デザインの違いで4ブランド5点を比較しています。</p>
     </div>
   </li>
-  <li>
+  <li data-category="cat">
     <a class="thumb-link" href="articles/cat-food-comparison.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/dog-penet/cabinet/royalcanin/f11117.jpg?_ex=400x400" alt="ロイヤルカナン キトン" loading="lazy">
     </a>
@@ -232,7 +245,7 @@
       <p class="excerpt">ロイヤルカナン・tama・ブラバンソンヌなど、子猫用から成猫用・お試しサイズまで含めたキャットフード7点を、対象年齢とグレインフリーの有無、1kgあたりの実コストで比較しました。</p>
     </div>
   </li>
-  <li>
+  <li data-category="cat">
     <a class="thumb-link" href="articles/cat-litter-comparison.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/cat-land/cabinet/ranking/1533438.jpg?_ex=400x400" alt="お茶の猫砂（おから）" loading="lazy">
     </a>
@@ -242,7 +255,7 @@
       <p class="excerpt">おから・ベントナイト・炭・紙と素材の異なる猫砂5点を、消臭方式・処理方法（燃やせる/流せる）・内容量あたりの単価で比較しました。</p>
     </div>
   </li>
-  <li>
+  <li data-category="household">
     <a class="thumb-link" href="articles/leather-waterproof-spray.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/k-home/cabinet/06135991/09551991/975899.jpg?_ex=400x400" alt="革靴・スニーカー用の防水スプレー" loading="lazy">
     </a>
@@ -252,7 +265,7 @@
       <p class="excerpt">アメダス・Crep Protect・mikagami・actika・コロニル・マーキープレイヤーの6点を、対象アイテムとフッ素配合の有無、1回あたりの実コストで比較しました。</p>
     </div>
   </li>
-  <li>
+  <li data-category="appliance">
     <a class="thumb-link" href="articles/ai-voice-recorder-comparison.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/plaud/cabinet/12930484/imgrc0146650424.jpg?_ex=400x400" alt="AIボイスレコーダー" loading="lazy">
     </a>
@@ -262,7 +275,7 @@
       <p class="excerpt">定番PLAUDのペン型3モデルとウェアラブル型、他ブランドの2機種を含む計6点を、本体のスタイルとAI機能・価格で比較しました。</p>
     </div>
   </li>
-  <li>
+  <li data-category="music">
     <a class="thumb-link" href="articles/record-wall-display-comparison.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/siba-98/cabinet/09993732/11031168/imgrc0125372710.jpg?_ex=400x400" alt="レコード壁掛けディスプレイ" loading="lazy">
     </a>
@@ -272,7 +285,7 @@
       <p class="excerpt">複数枚を並べるアクリルラックから、1枚をじっくり見せる木製・専門ブランドのフレームまで。レコードを壁に飾るためのグッズを4点、飾れる枚数と素材で比較。</p>
     </div>
   </li>
-  <li>
+  <li data-category="cat">
     <a class="thumb-link" href="articles/cat-auto-feeder-comparison.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/ioroi/cabinet/08674576/09756047/imgrc0122423382-1.jpg?_ex=400x400" alt="猫の自動給餌器" loading="lazy">
     </a>
@@ -282,7 +295,7 @@
       <p class="excerpt">留守番中も様子を見られるカメラ付きタイプから、スマホ操作なしで完結する本体だけのタイプまで。猫の自動給餌器を7点、カメラの有無・容量・電源方式で比較。</p>
     </div>
   </li>
-  <li>
+  <li data-category="beauty">
     <a class="thumb-link" href="articles/hands-free-dryer-stand-comparison.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/roomy/cabinet/500cart_all/500cart_11g/p5-7/ymz1004-ss027-0_gt01.jpg?_ex=400x400" alt="ハンズフリーのドライヤースタンド" loading="lazy">
     </a>
@@ -292,7 +305,7 @@
       <p class="excerpt">壁掛け式・クリップ固定式・据え置きスタンドといった後付けホルダーから、本体ごと一体型のドライヤーまで。両手が空く方法を7点、比較。</p>
     </div>
   </li>
-  <li>
+  <li data-category="household">
     <a class="thumb-link" href="articles/rain-business-shoes-comparison.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/tukn/cabinet/item001/default/imgrc0138389891.jpg?_ex=400x400" alt="雨の日用の防水シューズ" loading="lazy">
     </a>
@@ -302,7 +315,7 @@
       <p class="excerpt">見た目は革靴のままの防水ビジネスシューズから、完全防水のレインブーツ、レディース向けローファーまで。雨の日の通勤靴を7点、見た目のタイプとサイズ展開の違いで比較。</p>
     </div>
   </li>
-  <li>
+  <li data-category="food">
     <a class="thumb-link" href="articles/protein-powder-comparison.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/takeuchi-labo/cabinet/07385387/thepro/ta-the-pr/ta-the-pr-smc.jpg?_ex=400x400" alt="ザプロ ホエイプロテイン" loading="lazy">
     </a>
@@ -312,7 +325,7 @@
       <p class="excerpt">ザプロ・ビーレジェンド・FIXITなどのホエイプロテインに、子供用ソイプロテインも含めた7点を、1食の目安量をもとに1食あたりの実コストで比較。</p>
     </div>
   </li>
-  <li>
+  <li data-category="food">
     <a class="thumb-link" href="articles/cereal-comparison.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/tsutsu-uraura/cabinet/11567390/4904075007703-4.jpg?_ex=400x400" alt="日食 プレミアムピュアオートミール" loading="lazy">
     </a>
@@ -322,7 +335,7 @@
       <p class="excerpt">日食のプレミアムピュア・オーガニックピュアオートミールから、日清シスコ ごろグラ、カルビー フルグラまで。1食の目安量をもとに実コストを算出し4点を比較。</p>
     </div>
   </li>
-  <li>
+  <li data-category="beauty">
     <a class="thumb-link" href="articles/deodorant-comparison.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/e-itto/cabinet/ai/sp5/ai51-13.jpg?_ex=400x400" alt="制汗剤・デオドラントスプレー" loading="lazy">
     </a>
@@ -332,7 +345,7 @@
       <p class="excerpt">ミョウバン配合の定番スプレーから、植物由来のバイオ系デオドラント、ロールオンも選べるタイプまで。内容量が17mL〜100mLと違う4点を1回あたりの実コストで比較。</p>
     </div>
   </li>
-  <li>
+  <li data-category="household">
     <a class="thumb-link" href="articles/pillow-comparison.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/haoxie/cabinet/pillow-hotel/sm-hpd2/imgrc0096962222.jpg?_ex=400x400" alt="少し高級路線の枕" loading="lazy">
     </a>
@@ -342,7 +355,7 @@
       <p class="excerpt">ホテル仕様のふわふわタイプから、首や肩への負担を減らすロータイプ、羽毛・高反発など詰め物の違いまで。高さ・素材・機能表記の違いで5点を比較。</p>
     </div>
   </li>
-  <li>
+  <li data-category="beauty">
     <a class="thumb-link" href="articles/hand-cream-comparison.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/adpentel/cabinet/pro/07906863/imgrc0079768100.jpg?_ex=400x400" alt="ハンドクリーム" loading="lazy">
     </a>
@@ -352,7 +365,7 @@
       <p class="excerpt">尿素配合の定番クリームから、添加物なしのシアバター100%・高純度ワセリン、使用回数の目安つきの医薬部外品まで。処方タイプの違う6点を1回あたりの実コストで比較。</p>
     </div>
   </li>
-  <li>
+  <li data-category="household">
     <a class="thumb-link" href="articles/sun-umbrella-comparison.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/azusa/cabinet/6san/imgrc0171182741.jpg?_ex=400x400" alt="晴雨兼用の折りたたみ日傘" loading="lazy">
     </a>
@@ -362,7 +375,7 @@
       <p class="excerpt">完全遮光100%と表記されるものから遮熱率で示されるものまで。自動開閉の有無・重さ・サイズも含めて、折りたたみ日傘を7点比較。</p>
     </div>
   </li>
-  <li>
+  <li data-category="household">
     <a class="thumb-link" href="articles/kitchen-sponge-comparison.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/dainichi-corp/cabinet/saleimg/imgrc0103075286.jpg?_ex=400x400" alt="キッチンスポンジ" loading="lazy">
     </a>
@@ -372,7 +385,7 @@
       <p class="excerpt">サンサン・あわもん・マーナ・nikii・天然素材タイプ・泡キュットの6点を1個あたりの実コストで比較。セット数の違いだけで単価は4倍ほど開く。</p>
     </div>
   </li>
-  <li>
+  <li data-category="beauty">
     <a class="thumb-link" href="articles/body-soap-comparison.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/rakuten24/cabinet/747/4901417169747.jpg?_ex=400x400" alt="ボディソープの詰め替え" loading="lazy">
     </a>
@@ -382,7 +395,7 @@
       <p class="excerpt">ナイーブ・Dove・レイヴィーの5点を1回あたりの実コストで比較。Doveは単品と2個セットで実質コストがほぼ変わらない結果に。</p>
     </div>
   </li>
-  <li>
+  <li data-category="coffee">
     <a class="thumb-link" href="articles/coffee-mug.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/glv/cabinet/newsingle202409/itt-63rak1si.jpg?_ex=400x400" alt="コーヒー用マグカップ" loading="lazy">
     </a>
@@ -392,7 +405,7 @@
       <p class="excerpt">北欧デザイナーズブランドの陶器から、目盛り付きの耐熱ガラス、名入れの木製ペア、保温できるステンレスまで。素材と使い勝手の違いで6点を比較。</p>
     </div>
   </li>
-  <li>
+  <li data-category="household">
     <a class="thumb-link" href="articles/fabric-softener.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/rakuten24/cabinet/688/4582469501688.jpg?_ex=400x400" alt="柔軟剤の詰め替え" loading="lazy">
     </a>
@@ -402,7 +415,7 @@
       <p class="excerpt">香りの好みで選ぶことが多い柔軟剤も、1回あたりのコストで見るとブランド・容量・セット構成で差が出る。ランドリン・ラボン・ハル・レールデュサボンなど5点を比較。</p>
     </div>
   </li>
-  <li>
+  <li data-category="household">
     <a class="thumb-link" href="articles/dish-soap-comparison.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/kurashikenkou/cabinet/tasya113/9847345.jpg?_ex=400x400" alt="食器用洗剤の詰め替え" loading="lazy">
     </a>
@@ -412,7 +425,7 @@
       <p class="excerpt">パッケージの価格だけを見て選ぶと気づきにくいが、1回あたりのコストは石けん系と除菌系で2倍近く開く。緑の魔女・JOY・シャボン玉石けんなど5点を比較。</p>
     </div>
   </li>
-  <li>
+  <li data-category="coffee">
     <a class="thumb-link" href="articles/electric-coffee-grinder.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/riccado/cabinet/coffee-grinder-mill/cg200s.jpg?_ex=400x400" alt="電動コーヒーミル" loading="lazy">
     </a>
@@ -422,7 +435,7 @@
       <p class="excerpt">臼式・コニカル式という基本構造はほぼ共通なのに、価格は3,480円から14,980円まで開きがある。差の理由は段階数とエスプレッソ対応の有無。6点を比較。</p>
     </div>
   </li>
-  <li>
+  <li data-category="household">
     <a class="thumb-link" href="articles/carbonated-bottle.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/tiger-online/cabinet/mkb-t048.jpg?_ex=400x400" alt="炭酸対応ボトル" loading="lazy">
     </a>
@@ -432,7 +445,7 @@
       <p class="excerpt">「炭酸対応」と書いてあれば同じだろうと思って選ぶと、あとで温かい飲み物が入れられないことに気づく。サーモス・タイガー2機種・レボマックスなど6点を比較。</p>
     </div>
   </li>
-  <li>
+  <li data-category="coffee">
     <a class="thumb-link" href="articles/coffee-scale.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/atlas-online/cabinet/adcs/adcs-03/adcs-031_1.jpg?_ex=400x400" alt="コーヒー用キッチンスケール" loading="lazy">
     </a>
@@ -442,7 +455,7 @@
       <p class="excerpt">1,980円台から0.1g単位の高精度に対応する時代に、価格差の理由はどこにあるのか。タイマー・風袋引き・電源方式の違いで5点を比較。</p>
     </div>
   </li>
-  <li>
+  <li data-category="beauty">
     <a class="thumb-link" href="articles/shampoo-comparison.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/tsurunishi/cabinet/allna/top/90xb077ptnj29.jpg?_ex=400x400" alt="シャンプーの詰め替え" loading="lazy">
     </a>
@@ -452,7 +465,7 @@
       <p class="excerpt">オーガニック系の単品から、サロン系のトリートメントセット、馬油ベースの大容量まで。単品かセットかで1回あたりのコストは3倍以上開く。</p>
     </div>
   </li>
-  <li>
+  <li data-category="music">
     <a class="thumb-link" href="articles/wireless-earbuds.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/gracevally/cabinet/09355687/09355695/12855263/x12026-front-0629.jpg?_ex=400x400" alt="ワイヤレスイヤホン" loading="lazy">
     </a>
@@ -462,7 +475,7 @@
       <p class="excerpt">耳栓型の定番から、耳をふさがないイヤーカフ・オープンイヤー型、骨伝導型まで。装着方式と機能の違いで7点を比較。</p>
     </div>
   </li>
-  <li>
+  <li data-category="coffee">
     <a class="thumb-link" href="articles/coffee-kettle.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/myhomeshop/cabinet/10352264/11477094/11675980/imgrc0332213479.jpg?_ex=400x400" alt="コーヒー用電気ケトル" loading="lazy">
     </a>
@@ -472,7 +485,7 @@
       <p class="excerpt">スタンダード型からグースネック、0.5℃単位のコーヒー専用モデル、折りたたみの旅行用まで。温度調節の精度と注ぎ口の形状で比較。</p>
     </div>
   </li>
-  <li>
+  <li data-category="music">
     <a class="thumb-link" href="articles/wired-earphones.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/final-inc/cabinet/thumbnail_final/ep-e/e1000_t-002.jpg?_ex=400x400" alt="有線イヤホン" loading="lazy">
     </a>
@@ -482,7 +495,7 @@
       <p class="excerpt">パナソニックのロングセラーからfinal E1000C、SONYのEXTRA BASSまで。端子の種類と音の傾向で比較。</p>
     </div>
   </li>
-  <li>
+  <li data-category="coffee">
     <a class="thumb-link" href="articles/coffee-dripper.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/imaritogei/cabinet/07150405/imgrc0092879771.jpg?_ex=400x400" alt="コーヒードリッパー" loading="lazy">
     </a>
@@ -492,7 +505,7 @@
       <p class="excerpt">ペーパーレスのセラミックフィルターから、定番HARIO V60、波佐見焼のエコフィルター、リバーシブル樹脂タイプまで比較。</p>
     </div>
   </li>
-  <li>
+  <li data-category="household">
     <a class="thumb-link" href="articles/face-masks-comparison.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/life-life/cabinet/mask/mask120kf1new26.jpg?_ex=400x400" alt="不織布マスク" loading="lazy">
     </a>
@@ -502,7 +515,7 @@
       <p class="excerpt">血色マスクの大容量パックから、国産JIS規格適合、米国N95認証まで。1枚あたりの単価は5倍以上開く。</p>
     </div>
   </li>
-  <li>
+  <li data-category="appliance">
     <a class="thumb-link" href="articles/portable-monitor.html">
       <img class="thumb" src="assets/photos/monitor-keytocombat.jpg" alt="モバイルモニター" loading="lazy">
     </a>
@@ -512,7 +525,7 @@
       <p class="excerpt">ノートPCの横にもう一枚。重さ・解像度・電源の取り方・保証の違いで、15.6インチを中心に6点を比較。1点は実際に使っています。</p>
     </div>
   </li>
-  <li>
+  <li data-category="household">
     <a class="thumb-link" href="articles/garbage-bags.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/onestep/cabinet/life/life11/9a0139.jpg?_ex=400x400" alt="ゴミ袋45L" loading="lazy">
     </a>
@@ -522,7 +535,7 @@
       <p class="excerpt">半透明・黒・業務用厚手・ボックスタイプ・お試し用ひも付きまで、1枚あたりの実コストで6点を比較。</p>
     </div>
   </li>
-  <li>
+  <li data-category="household">
     <a class="thumb-link" href="articles/sukima-cleaning-comparison.html">
       <img class="thumb" src="assets/photos/sukima-azuma.jpg" alt="すき間掃除グッズ" loading="lazy">
     </a>
@@ -532,7 +545,7 @@
       <p class="excerpt">使い捨てシート式、専用の粘着シート式、くり返し使えるブラシ式まで、アズマ工業・カインズ・ニトムズ・レック・ダイソーの5点を比較。</p>
     </div>
   </li>
-  <li>
+  <li data-category="coffee">
     <a class="thumb-link" href="articles/coffee-canister.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/excelliving/cabinet/11427908/top4.jpg?_ex=400x400" alt="コーヒーキャニスター" loading="lazy">
     </a>
@@ -542,7 +555,7 @@
       <p class="excerpt">真空タイプ・バルブ付きtower・陶器・耐熱ガラスまで、密閉方式と素材の違いで6点を比較。</p>
     </div>
   </li>
-  <li>
+  <li data-category="music">
     <a class="thumb-link" href="articles/waterproof-bluetooth-speaker.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/entamefactory/cabinet/newlp/funlogy_portable/slide/samune_black.jpg?_ex=400x400" alt="防水Bluetoothスピーカー" loading="lazy">
     </a>
@@ -552,7 +565,7 @@
       <p class="excerpt">IPX5からIP67まで、防水規格と連続再生時間の違いで7点を比較。1点は実際に自宅で使用中。</p>
     </div>
   </li>
-  <li>
+  <li data-category="household">
     <a class="thumb-link" href="articles/bath-mat-comparison.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/yamayuu/cabinet/01023319/bathgoods/10648094/ubs-1-thum01.jpg?_ex=400x400" alt="珪藻土バスマット" loading="lazy">
     </a>
@@ -562,7 +575,7 @@
       <p class="excerpt">珪藻土は瞬間吸収・速乾だが割れる心配がある。マイクロファイバー・タオル地は丸洗いできるが乾くまで時間がかかる。</p>
     </div>
   </li>
-  <li>
+  <li data-category="stationery">
     <a class="thumb-link" href="articles/ballpoint-pen-refills.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/hanko-otobe/cabinet/supply/supply02/sxr-200-varie5.jpg?_ex=400x400" alt="ボールペンの替え芯" loading="lazy">
     </a>
@@ -572,7 +585,7 @@
       <p class="excerpt">対応する本体とセット本数が違うだけで、1本あたりの単価は6倍ほど開く。</p>
     </div>
   </li>
-  <li>
+  <li data-category="household">
     <a class="thumb-link" href="articles/chair-leg-pad-comparison.html">
       <img class="thumb" src="assets/photos/chairleg-xprotector.jpg" alt="椅子脚のキズ防止パッド" loading="lazy">
     </a>
@@ -582,7 +595,7 @@
       <p class="excerpt">貼る・かぶせる・刺すの3方式と、1枚あたりの実コストで5点を比較。100均のシールが実は一番安い。</p>
     </div>
   </li>
-  <li>
+  <li data-category="coffee">
     <a class="thumb-link" href="articles/hand-grinder-comparison.html">
       <img class="thumb" src="assets/photos/hand-grinder-hario.png" alt="手挽きコーヒーミル" loading="lazy">
     </a>
@@ -592,7 +605,7 @@
       <p class="excerpt">刃の素材・調整方式・サイズで比べる、定番から本格志向まで5本。</p>
     </div>
   </li>
-  <li>
+  <li data-category="beauty">
     <a class="thumb-link" href="articles/toothbrush-heads.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/beautyhair/cabinet/mbimg/burashi/oral-b-select-202509.jpg?_ex=400x400" alt="電動歯ブラシの替えブラシ" loading="lazy">
     </a>
@@ -602,7 +615,7 @@
       <p class="excerpt">対応機種と純正・互換の違いだけで、1本あたりのコストは9倍以上開く。</p>
     </div>
   </li>
-  <li>
+  <li data-category="stationery">
     <a class="thumb-link" href="articles/fountain-pen-ink.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/auc-youstyle/cabinet/lamy/shohin01/lt10bk-zt.jpg?_ex=400x400" alt="万年筆用カートリッジインク" loading="lazy">
     </a>
@@ -612,7 +625,7 @@
       <p class="excerpt">同じLAMYでも、カートリッジからボトルに変えるだけで1回あたりは5分の1近くまで下がる。</p>
     </div>
   </li>
-  <li>
+  <li data-category="household">
     <a class="thumb-link" href="articles/laundry-detergent.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/rakuten24/cabinet/421/405421.jpg?_ex=400x400" alt="洗濯洗剤の詰め替え" loading="lazy">
     </a>
@@ -622,7 +635,7 @@
       <p class="excerpt">同じ4kg前後のパッケージでも、1回の使用量が違うだけでコストは3倍以上開く。</p>
     </div>
   </li>
-  <li>
+  <li data-category="household">
     <a class="thumb-link" href="articles/chair-mat-comparison.html">
       <img class="thumb" src="assets/photos/chairmat-glass-hasipu.png" alt="チェアマット" loading="lazy">
     </a>
@@ -632,7 +645,7 @@
       <p class="excerpt">サイズよりも素材で価格・使い勝手が大きく変わる。PVC・布・フランネル・強化ガラスの4系統を比較。</p>
     </div>
   </li>
-  <li>
+  <li data-category="household">
     <a class="thumb-link" href="articles/dishwasher-detergent.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/good-item/cabinet/10833108/compass1729847368.jpg?_ex=400x400" alt="食洗機用洗剤" loading="lazy">
     </a>
@@ -642,7 +655,7 @@
       <p class="excerpt">形状ごとの手間と溶けやすさ、1回あたりのコストについて。</p>
     </div>
   </li>
-  <li>
+  <li data-category="coffee">
     <a class="thumb-link" href="articles/v60-paper-filter.html">
       <img class="thumb" src="assets/photos/drip-overhead.jpg" alt="ハンドドリップの様子" loading="lazy">
     </a>
@@ -655,6 +668,31 @@
 </ul>
 
 </div>
+<script>
+(function () {
+  var pills = document.querySelectorAll('.filter-pill');
+  var items = document.querySelectorAll('.article-list > li');
+  var empty = document.querySelector('.filter-empty');
+
+  function applyFilter(key) {
+    var visibleCount = 0;
+    items.forEach(function (li) {
+      var show = key === 'all' || li.getAttribute('data-category') === key;
+      li.hidden = !show;
+      if (show) visibleCount++;
+    });
+    if (empty) empty.hidden = visibleCount > 0;
+  }
+
+  pills.forEach(function (pill) {
+    pill.addEventListener('click', function () {
+      pills.forEach(function (p) { p.classList.remove('is-active'); });
+      pill.classList.add('is-active');
+      applyFilter(pill.getAttribute('data-filter'));
+    });
+  });
+})();
+</script>
 </main>
 <footer class="site">
   <div class="container">
