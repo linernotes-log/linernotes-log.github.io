@@ -41,6 +41,12 @@
 
 <p class="section-label">Posts</p>
 
+<div class="search-box" role="search">
+  <label for="article-search" class="visually-hidden">記事をキーワードで検索</label>
+  <input type="search" id="article-search" placeholder="キーワードで検索（例：コーヒー、除湿機）" autocomplete="off">
+  <button type="button" class="clear-search" aria-label="検索をクリア">×</button>
+</div>
+
 <div class="category-filter" role="group" aria-label="カテゴリで絞り込む">
   <button type="button" class="filter-pill is-active" data-filter="all">すべて</button>
   <button type="button" class="filter-pill" data-filter="coffee">コーヒー</button>
@@ -713,24 +719,56 @@
   var pills = document.querySelectorAll('.filter-pill');
   var items = document.querySelectorAll('.article-list > li');
   var empty = document.querySelector('.filter-empty');
+  var searchInput = document.getElementById('article-search');
+  var clearBtn = document.querySelector('.clear-search');
+  var currentCategory = 'all';
 
-  function applyFilter(key) {
+  // 各記事の検索対象テキスト（タイトル＋抜粋）を先に1回だけ拾っておく
+  var searchText = new Map();
+  items.forEach(function (li) {
+    var title = li.querySelector('.title');
+    var excerpt = li.querySelector('.excerpt');
+    var text = (title ? title.textContent : '') + ' ' + (excerpt ? excerpt.textContent : '');
+    searchText.set(li, text.toLowerCase());
+  });
+
+  function applyFilter() {
+    var query = (searchInput.value || '').trim().toLowerCase();
     var visibleCount = 0;
     items.forEach(function (li) {
-      var show = key === 'all' || li.getAttribute('data-category') === key;
+      var matchesCategory = currentCategory === 'all' || li.getAttribute('data-category') === currentCategory;
+      var matchesQuery = !query || searchText.get(li).indexOf(query) !== -1;
+      var show = matchesCategory && matchesQuery;
       li.hidden = !show;
       if (show) visibleCount++;
     });
-    if (empty) empty.hidden = visibleCount > 0;
+    if (empty) {
+      empty.hidden = visibleCount > 0;
+      empty.textContent = query
+        ? 'そのキーワードに一致する記事は見つかりませんでした。'
+        : 'このカテゴリの記事はまだありません。';
+    }
   }
 
   pills.forEach(function (pill) {
     pill.addEventListener('click', function () {
       pills.forEach(function (p) { p.classList.remove('is-active'); });
       pill.classList.add('is-active');
-      applyFilter(pill.getAttribute('data-filter'));
+      currentCategory = pill.getAttribute('data-filter');
+      applyFilter();
     });
   });
+
+  if (searchInput) {
+    searchInput.addEventListener('input', applyFilter);
+  }
+  if (clearBtn && searchInput) {
+    clearBtn.addEventListener('click', function () {
+      searchInput.value = '';
+      searchInput.focus();
+      applyFilter();
+    });
+  }
 })();
 </script>
 </main>
