@@ -491,7 +491,7 @@
       <p class="excerpt">臼式・コニカル式という基本構造はほぼ共通なのに、価格は3,480円から14,980円まで開きがある。差の理由は段階数とエスプレッソ対応の有無。6点を比較。</p>
     </div>
   </li>
-  <li data-category="household">
+  <li data-category="household" data-aliases="水筒 マイボトル タンブラー">
     <a class="thumb-link" href="articles/carbonated-bottle.html">
       <img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/tiger-online/cabinet/mkb-t048.jpg?_ex=400x400" alt="炭酸対応ボトル" loading="lazy">
     </a>
@@ -733,12 +733,16 @@
   var clearBtn = document.querySelector('.clear-search');
   var currentCategory = 'all';
 
-  // 各記事の検索対象テキスト（タイトル＋抜粋）を先に1回だけ拾っておく
+  // 各記事の検索対象テキスト（タイトル＋抜粋＋別名）を先に1回だけ拾っておく。
+  // 別名（data-aliases）は、タイトル・抜粋に出てこない呼び方（例：「ボトル」記事に対する
+  // 「水筒」）だけを記事ごとに個別に足すためのもの。「ボトル」＝「水筒」と全体で同義語に
+  // すると、マウスウォッシュの「ボトルタイプ」等の無関係な記事まで拾ってしまうため
   var searchText = new Map();
   items.forEach(function (li) {
     var title = li.querySelector('.title');
     var excerpt = li.querySelector('.excerpt');
-    var text = (title ? title.textContent : '') + ' ' + (excerpt ? excerpt.textContent : '');
+    var aliases = li.getAttribute('data-aliases') || '';
+    var text = (title ? title.textContent : '') + ' ' + (excerpt ? excerpt.textContent : '') + ' ' + aliases;
     searchText.set(li, text.toLowerCase());
   });
 
