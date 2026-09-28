@@ -79,6 +79,22 @@ main { padding: 0 0 100px; }
 .article-list a.title:hover { color: var(--accent); }
 .article-list p.excerpt { margin: 8px 0 0; font-size: 0.8rem; color: var(--sub); line-height: 1.8; }
 
+/* 動画で紹介した記事：ショート動画のプロフィールリンクの行き先。見た人は絵をもう見ているので、
+   ここは行き先へのリンクだけでよい。高さを取らない1行の帯にする。新しいものを先頭に追加していく。 */
+.video-picks {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px;
+  margin: 0 0 40px;
+  padding: 10px 14px;
+  border-left: 2px solid var(--accent);
+  background: #faf8f5;
+  font-size: 0.82rem;
+}
+.video-picks-label { color: var(--sub); white-space: nowrap; }
+.video-picks-list { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 4px 16px; }
+.video-picks-list li { margin: 0; }
+.video-picks-list a { color: var(--text); text-decoration: underline; text-underline-offset: 2px; }
+.video-picks-list a:hover { color: var(--accent); }
+
 /* カテゴリ絞り込み */
 .category-filter {
   display: flex; flex-wrap: wrap; gap: 8px;
